@@ -1,5 +1,8 @@
 package com.ncusc.dms.service.user;
 
+import com.ncusc.dms.mapper.AdminMapper;
+import com.ncusc.dms.mapper.StudentMapper;
+import com.ncusc.dms.mapper.TeacherMapper;
 import com.ncusc.dms.mapper.UserAccountMapper;
 import com.ncusc.dms.pojo.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +20,19 @@ import java.util.Set;
 /**
  *
  * 登陆集中授权处理
- * @author WANGHAO
+ * @author WANGHAO && WangYiqing
  * @version 1.0.0
  */
 @Service
 public class UserAccountService implements UserDetailsService {
     @Autowired
     UserAccountMapper userAccountMapper;
-
+    @Autowired
+    AdminMapper adminmapper;
+    @Autowired
+    StudentMapper studentmapper;
+    @Autowired
+    TeacherMapper teachermapper;
     /**
      * 返回用户验证信息供Spring Security使用
      * @param str 注意：参数为用户id
@@ -42,4 +50,44 @@ public class UserAccountService implements UserDetailsService {
         return new User(userAccount.getName(), userAccount.getPassword(), grantedAuthorities);
 
     }
+
+    /**
+     * 注册
+     * @param id
+     * @param name
+     * @param password
+     * @return
+     */
+    public boolean addUser(String id,String name,String password)
+    {
+        if(adminmapper.get(id)==null && studentmapper.getById(id)==null && teachermapper.getById(id)==null)
+        {
+            UserAccount user = new UserAccount();
+            user.setId(id);
+            user.setName(name);
+            user.setAuthority("USER");
+            user.setPassword(password);
+            userAccountMapper.add(user);
+            return true;
+        }
+        else
+            return false;//用户已存在,注册失败
+    }
+
+    /**
+     * 登录
+     * @param id
+     * @param password
+     * @return
+     */
+    /*public UserAccount loginUser(String id,String password)
+    {
+        UserAccount user = userAccountMapper.findUserAccountByUserId(id);
+        if(password.equals(user.getPassword()))
+            return user;
+        else
+            return null; //id不存在或密码不匹配
+
+    }*/
+
 }
