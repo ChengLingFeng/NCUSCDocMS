@@ -35,7 +35,7 @@ public class UserAccountService implements UserDetailsService {
     public UserDetails loadUserByUsername(String str) throws UsernameNotFoundException {
         UserAccount userAccount = userAccountMapper.findUserAccountByUserId(str);
         if (userAccount == null) {
-            throw new UsernameNotFoundException("用户名不存在");
+            throw new UsernameNotFoundException("用户名："+str+"不存在");
         }
         Set<GrantedAuthority> grantedAuthorities = new HashSet<GrantedAuthority>();
         grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+userAccount.getAuthority()));//默认是ROLE_开头
