@@ -44,7 +44,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/login")
-    public String Login(@RequestParam("id") String id,@RequestParam("password") String password,Model model)
+    public String Login(ModelAndView mdv)
     {
 
         return "login/login";
