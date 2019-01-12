@@ -54,5 +54,9 @@ public class LoginController {
         model.addAttribute("loginError", true);
         return "login/login";
     }
+    @RequestMapping("/")
+    public String index(Model model) {
+        return "index";
+    }
 
 }
