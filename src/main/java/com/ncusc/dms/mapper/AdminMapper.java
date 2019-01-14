@@ -45,6 +45,7 @@ public interface AdminMapper {
     @Select("select * from admin_info  where id= #{id}")
     public Admin get(@Param("id")String id);
 
+
     /**
      * 列出所有管理员
      * @return 管理员列表(List<Admin>)

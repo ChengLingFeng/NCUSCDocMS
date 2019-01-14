@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head><meta charset="UTF-8">
+<title>Home</title>
+<script type="application/x-javascript">
+	addEventListener("load", function()
+	{ setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); }
+</script>
+<link href="/css/index/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="/css/index/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/index/jquery.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="/js/index/move-top.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!---- start-smoth-scrolling---->
+	<script type="text/javascript" src="/js/index/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="/js/index/jquery.contentcarousel.js"></script>
+    <script type="text/javascript" src="/js/index/easing.js"></script>
+
+    </head>
+    <body>
+        <div class="banner" id="home">
+            <div class="container">
+                <div class="header">
+                    <div class="menu">
+                                         <a class="toggleMenu" href="#"><img src="/images/index/menu-icon.png" alt="" /> </a>
+                        <ul class="nav" id="nav">
+                        <li class="active"><a href="index.html" class="active" >首页</a></li>
+                        <li><a href="#" th:href="@{/register}">公告通知</a></li>
+                        <li><a>作品展示</a></li>
+                        <li><a>科研课题</a></li>
+                        <li><a href="#" th:href="@{/login}">登录</a></li>
+                        <li><a href="#" th:href="@{/register}">注册</a></li>
+                        </ul>
+                                      <!----start-top-nav-script---->
+		                      <script type="text/javascript" src="/js/index/responsive-nav.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+		<!----//End-top-nav-script---->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!--/start-text-slider-->
+		<div  class="testimonials" id="testimonials">
+			<div class="wmuSlider example1">
+		 	<div class="container-flueid">
+			   <article style="position: absolute; width:70%; opacity: 0;"> 
+					<div class=" cont span_2_of_3 client-main">
+						<div class="logo">
+							<a href="#"><img src="/images/index/logo.png" alt=""></a>
+						</div>
+							<div class="slide-text">
+									<p>Excellent homework</p>
+						  	<span> </span>
+						 	</div>
+						 	<div class="clearfix"> </div>  
+					</div>
+				</article>
+				 <article style="position: absolute; width:64%; opacity: 0;"> 
+				   	<div class=" cont span_2_of_3  client-main">
+				   		<div class="logo">
+							<a href="#"><img src="/images/index/logo.png" alt=""></a>
+						</div>
+							<div class="slide-text">
+								<p>Excellent Graduation Design Works</p>
+						  			<span> </span>
+						 	</div>
+						 	<div class="clearfix"> </div>  
+					</div>
+				 </article>
+				 <article style="position: absolute; width:64%; opacity: 0;"> 
+				   	<div class="cont span_2_of_3  client-main">
+				   		<div class="logo">
+							<a href="#"><img src="/images/index/logo.png" alt=""></a>
+						</div>
+							<div class="slide-text">
+									<p>Scientific research topic</p>
+						  	<span> </span>
+						 	</div>
+						 	<div class="clearfix"> </div>  
+					</div>
+				 </article>
+				<script src="/js/index/jquery.wmuSlider.js"></script>
+				<script>
+					$('.example1').wmuSlider();
+				</script>
+			</div>
+	     </div>
+	 </div>
+	 <!--//text-slider-->
+		</div>
+	</div>
+	<!--start-welcome-->
+	<div class="welcome">
+		<div class="container">
+			<div class="welcome-main">
+				<div class="col-md-6 welcome-left">
+					<h1>Welcome</h1>
+					<p>本系统引进 EI 、SCI 、ISTP 、SPRINGER 、 ELSEVIER 、 PQDD 等数据库 72种；电子图书 254万余册。建成的综合网络环境下的文献资源云存储平台、计算机集成管理系统、电子文献阅览室、电子文献检索室，给读者营造了良好的学习环境。</p>
+					<p>本系统在文献资源分布、读者区域设置、服务流程走向等方面充分体现“以人为本”、“人性化服务”的理念，集多种载体的文献为一体，集借、藏、阅多功能服务为一体，辅以开放的管理方式和各种现代化技术设备的应用，为阅读型读者开设了图书文献导读、图书文献借阅、文献利用咨询、文献检索教学、文献资源利用培训等服务项目；为研究型读者开展了科技查新、查收查引、定题服务、学科信息动态分析、馆际互借与文献传递、科研产出能力分析、文献资源利用培训等多元化的服务项目。</p>
+					<div class="tool">
+						<a class="tooltips" href="#">
+							<span>Read More</span></a>
+					</div>
+				</div>
+				<div class="col-md-6 welcome-right">
+					<img src="/images/index/welcome.jpg" width="600px" />
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div><div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+	<!--end-welcome-->
+	<!--start-news-->
+	<div class="news">
+		<div class="container">
+			<div class="news-main">
+				<h3>最新公告通知</h3>
+				<div class="news-text">
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>27</h5>
+							<p>Nov</p>
+						</div>
+						<div class="news-right">
+							<h4>中国科学引文索引数据库开通试用</h4>
+							<p>试用时间，至2018.12.21 《中国科学引文索引数据库（CSCI）》是由中国科学技术信息研究所推出的基于期刊引用的检索评价工具，囊括了1950年以来我国出版的科技类和部分社科类学术期刊约9000余种，累积论文.. </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>10</h5>
+							<p>Dec</p>
+						</div>
+						<div class="news-right">
+							<h4>书香南昌大学互联网数字图书馆开通试用</h4>
+							<p>“书香南昌大学”互联网数字数据库为读者推出的集阅读、互动于一体的一站式互联网读书服务平台，平台包括16万余种电子图书、3万集有声读物、1000门电子期刊、均为正版授权资源。内容涵盖畅销长销、名家精品..</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>19</h5>
+							<p>Sept</p>
+						</div>
+						<div class="news-right">
+							<h4>可知电子书平台数据库开通试用</h4>
+							<p>一、数据库简介 “可知”是国内多家知名专业出版社电子图书的独家首发平台，目前提供10万余册的正版电子书在线阅读并持续更新，包括2018年最新图书，真正实现纸电同步出版。 目前已经入驻的国内顶级专业出..</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="news-text">
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>06</h5>
+							<p>Jul</p>
+						</div>
+						<div class="news-right">
+							<h4>Science Publishing Group开通使用</h4>
+							<p>SciencePublishingGroup（SciencePG）是一个以学术出版为主的国际化出版社，主要提供学术期刊和书籍的出版服务。出版物涵盖生物学、医学、物理、材料科学、数学、电子电气工程、计算机科学、能源与环境科..</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>05</h5>
+							<p>Jul</p>
+						</div>
+						<div class="news-right">
+							<h4>《全国报刊索引》近代期刊报纸全文数据库开通试用</h4>
+							<p>《全国报刊索引》为上海图书馆主管主办并倾力打造的知名服务品牌。2018年为南昌大学开通的试用产品为《晚清期刊全文数据库》、《民国时期期刊全文数据库》、《字林洋行中英文报纸全文数据库》、《中国近代..</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>26</h5>
+							<p>Apr</p>
+						</div>
+						<div class="news-right">
+							<h4>东篱科研大数据发现系统（DRDS）开通试用</h4>
+							<p>随着一带一路国家战略的提出，科技创新是一带一路的重要支撑；在举国科技创新的热潮下，为满足高校、科研院所、医院等科研单位的科研工作者对科研项目大数据的需求；“东篱科研大数据发现系统”在您科技创..</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end-news-->
+	<!--start-staff-->
+	<div class="staff">
+		<div class="container">
+			<div class="staff-text">
+				<h3>最新优秀作品</h3>
+				<div class="staff-main">
+					<div class="col-md-5 staff-main-left">
+						<h4>优秀大作业</h4>
+						<h5 class="s1">计算机仿真桥梁实验图</h5>
+						<p>提出了一种基于最大熵算法的桥梁形变检测方法。对桥梁图像进行压缩处理，计算桥梁形变阈值，从而实现桥梁形变程度检测。</p>
+						<h4>优秀毕业设计</h4>
+						<h5 class="s1">计算机应急响应系统体系结构</h5>
+						<p>CERT其核心目标是提供全局范围的安全服务,例如事件处理、安全咨询、安全评估等.引入对象建模的观点,任何服务都可以看作是系统对外提供的接口,每个接口的功能由具体的实施模块完成.实施模块所采用的策略、方法、技术,目前还远没有达到成熟的阶段,因此需要不断地研究和开发.按照这样的思路,我们引入层次化模型的概念,划分出计算机安全事件应急响应系统的基本体系结构.</p>
+						<h5 class="s1">图像边缘锐度判断得到的计算机生成图片示例</h5>
+						<p>大量的商品图片，其中的商品色彩是比较艳丽的，图像饱和点也比较多。在处理的过程中，没法找到一个合适的阈值来区分计算机生成图片和相机拍摄图片。该判断项可以用于判断自然风景相机拍摄图片，但是不能用于商品图的判定。</p>
+						<div class="tool">
+						<a class="tooltips" href="#">
+							<span>Read More</span></a>
+						</div>
+					</div>
+					<div class="col-md-7 events-col">
+				<div id="ca-container" class="ca-container"><div class="ca-nav"><span class="ca-nav-prev">Previous</span><span class="ca-nav-next">Next</span></div>
+				    <div class="ca-wrapper" style="overflow: hidden;">
+				         
+						<div class="ca-item ca-item-2" style="position: absolute; left: 0px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div>  
+								</div>
+							</div>
+						</div>
+						<div class="ca-item ca-item-3" style="position: absolute; left: 225px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 
+								</div>
+							</div>
+						</div>
+						<div class="ca-item ca-item-4" style="position: absolute; left: 450px;">
+							<div class="ca-item-main">
+								<div class="ca-icon"> 
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 	
+								</div>
+						     </div>
+						</div>
+						<div class="ca-item ca-item-5" style="position: absolute; left: 675px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 
+								 </div>
+							</div>
+						</div>
+						<div class="ca-item ca-item-6" style="position: absolute; left: 900px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div>  
+								</div>
+							</div>
+						</div>
+			    	</div>
+					<script type="text/javascript">
+			$('#ca-container').contentcarousel();
+		</script>
+			</div>
+		</div>
+   					<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--start-staff-->
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-6 footer-left">
+					<ul>
+						<li><a href="#"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="in"> </span></a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 footer-right">
+					<p>版权信息：Copyright &copy; 南昌大学软件学院</p>
+					<p>地址：江西省南昌市青山湖区南京东路235号</p>
+					<p>联系电话：400-169-8888 （免长途费） 0791－88138888</p>
+					<p>学院网址：<a href="http://soft.ncu.edu.cn/">http://soft.ncu.edu.cn/</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+                var defaults = {
+                      containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear'
+                 };
+                */
+
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+		</script>
+					<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+	<!--end-footer-->
+
+</body>
+</html>
